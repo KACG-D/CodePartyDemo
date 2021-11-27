@@ -1,0 +1,142 @@
+.Header{
+  height:64px;
+  width:100%;
+  position:relative;
+  background-color: #2f364d;
+  &__logo{
+    display: block;
+    top:16px;
+    left:48px;
+    height:32px;
+    position: absolute;
+    cursor: pointer;
+  }
+  &__menu{
+    position: absolute;
+    right:48px;
+    top:6px;
+    height:48px;
+    //border: 1px solid white;
+    color:white;
+    border-radius:5px;
+    line-height:48px;
+    cursor: pointer;
+    &::after{
+      content:"▼";
+      display: inline;
+      margin-left:16px;
+
+    }
+  }
+}
+.Contents {
+  font-family: "Nico Moji";
+  height:calc(100% - 64px);
+  width:100%;
+  padding:20px;
+  background-image:
+  repeating-linear-gradient(
+    90deg,
+    rgb(204, 204, 204) ,
+    rgb(204, 204, 204) 1px,
+    transparent 1px,
+    transparent 64px
+  ),
+  repeating-linear-gradient(
+    0deg,
+    rgb(204, 204, 204) ,
+    rgb(204, 204, 204) 1px,
+    #f5f4f5
+ 1px,
+ #f5f4f5
+ 64px
+  );
+
+
+  &__window{
+    border-radius: 40px;
+    height: 100%;
+    background-color: white;
+    position: relative;
+    box-shadow: #d8d2d2 0px 7px;
+    
+  }
+  &__headding{
+    background-color: #d8d2d2;
+    height:64px;
+    width:100%;
+    border-radius: 40px 40px  0 0;
+    line-height: 64px;
+    text-align: center;
+    font-size: 32px;
+  }
+  &__editor{
+    border-radius: 30px;
+    overflow: hidden;
+    padding:10px;
+    background: #1e1e1e;
+    height:100%;
+  }
+  &__window_contents{
+    display: flex;
+    height:calc(100% - 64px);
+    align-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    padding:20px 30px;
+    justify-content: center;
+    overflow: scroll;
+  }
+  &__left{
+    width:45%;
+    min-width:300px;
+    height: 100%;
+    padding:8px;
+    flex-grow: 1;
+  }
+  &__preview{
+    width:100%;
+    height:300px;
+    line-height: 300px;
+    text-align: center;
+    background-color:red;
+    padding:8px;
+
+    flex-grow: 1;
+  }
+  &__right{
+    width:45%;
+    height: 100%;
+    padding:8px;
+    min-width:500px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  &__buttons{
+    flex-grow: 0;
+    padding:8px;
+    display: flex;
+    justify-content: center;
+  }
+  &__divider{
+    width:30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &::before {
+      content: "";
+      background-color:#d8d2d2;
+      width: 5px;
+    }
+  }
+}
+.DemoPage{
+  height:100vh;
+}
+.icon{
+  height:1em;
+  vertical-align:middle;
+  display: inline-block;
+  padding-right: 10px;
+}
